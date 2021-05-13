@@ -3,6 +3,11 @@ function rotateImage(a) {
     let rotateMatrix = a[0].map((values, index) => a.map(row => row[index]).reverse());
     return rotateMatrix 
 }
+
+rotateImage(a:
+[[1,2,3], 
+ [4,5,6], 
+ [7,8,9]])
 ```
 
 ```javascript
