@@ -90,3 +90,25 @@ const message = () => {
 
 setTimeout(message, 2000)
 ```
+
+```javascript 
+const test = {
+  name: "Bob",
+  surname: "Janssen"
+}
+
+let refer = function(extra) {
+    console.log('Hello I am ' + this.name + " and my surname is " + this.surname + "and this is a" + extra);
+  }
+
+const test2 = {
+  name: "Chiho",
+  surname: "Liu"
+}
+
+refer.call(test2, 'call');
+refer.apply(test2, ['applyFunction']);
+
+let bindFunc = refer.bind(test2, 'bind');
+bindFunc()
+```
