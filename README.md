@@ -81,3 +81,12 @@ p.then((message) => {
   console.log(message)
 })
 ```
+
+Example of a callback
+```javascript 
+const message = () => {
+  console.log('Function is called after 3 seconds');
+}
+
+setTimeout(message, 2000)
+```
