@@ -92,6 +92,7 @@ setTimeout(message, 2000)
 ```
 
 ```javascript 
+// call, apply and bind
 const test = {
   name: "Bob",
   surname: "Janssen"
@@ -106,9 +107,11 @@ const test2 = {
   surname: "Liu"
 }
 
+// borrow function
 refer.call(test2, 'call');
 refer.apply(test2, ['applyFunction']);
 
+// bind method
 let bindFunc = refer.bind(test2, 'bind');
-bindFunc()
+bindFunc();
 ```
