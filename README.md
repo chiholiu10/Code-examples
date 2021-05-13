@@ -115,3 +115,23 @@ refer.apply(test2, ['applyFunction']);
 let bindFunc = refer.bind(test2, 'bind');
 bindFunc();
 ```
+
+```javascript
+function isCryptSolution(crypt, solution) {
+       let hasLeadingZeros = false;
+    const decrypted = crypt.map(word => {
+        const number = word.split('').map(letter => {
+            return solution.find(key => key[0] === letter)[1];
+        }).join('');
+        
+        if (number.startsWith('0') && number.length > 1) {
+            hasLeadingZeros = true;
+        }
+        
+        return Number.parseInt(number);
+    });
+    
+    
+    return !hasLeadingZeros && decrypted[0] + decrypted[1] === decrypted[2];
+}
+```
