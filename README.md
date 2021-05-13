@@ -52,7 +52,7 @@ const lengthOfLongestSubstring = (s) => {
     
     for (i=0; i < s.length; i++) {
         let current = map[arr[i]]
-        if (current!=null && start <= current) {
+        if (current!== undefined && start <= current) {
             start = current + 1
         } else {
             maxLen = Math.max(maxLen, i - start + 1)
