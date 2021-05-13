@@ -64,3 +64,20 @@ const lengthOfLongestSubstring = (s) => {
     return maxLen
 };
 ```
+
+```javascript
+let p = new Promise((resolve, reject) => {
+  let a = 2;
+  if(a === 2) {
+    console.log('Success');
+  } else {
+    console.log('Failed')
+  }
+});
+
+p.then((message) => {
+  console.log(message)
+}).catch((message) => {
+  console.log(message)
+})
+```
