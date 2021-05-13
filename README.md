@@ -81,20 +81,3 @@ p.then((message) => {
   console.log(message)
 })
 ```
-
-```javascript
-let p = new Promise((reject, resolve) => {
-  let a = 2;
-  if(a === 2) {
-    console.log('Success');
-  } else {
-    console.log('Failed');
-  }
-});
-
-p.then((message) => {
-  console.log(message);
-}).catch((message) => {
-  console.log(message);
-})
-```
