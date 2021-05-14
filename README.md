@@ -184,3 +184,28 @@ var findMedianSortedArrays = function(nums1, nums2) {
 findMedianSortedArrays([1,2], [3,4]);
 
 ```
+
+```javascript
+var combinationSum = function(candidates, target) {
+  const output = [];
+   //The goal is to use backtracking to find all combinations.
+  const findCombination = (remain, path, start) => {
+    if (remain < 0) {
+      return;
+    }
+    if (remain === 0) {
+      output.push([...path]);
+      return;
+    }
+    for (let i = start; i < candidates.length; i++) {
+      // create a new path array to run the subroutine. It's
+      // cleaner than pushing and then reseting the array in 
+      // javascript.
+      findCombination(remain - candidates[i], [...path, candidates[i]], i);    
+    }
+  }
+  findCombination(target, [], 0);
+  return output;
+};
+
+```
