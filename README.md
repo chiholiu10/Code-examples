@@ -166,3 +166,21 @@ function removeKFromList(l, k) {
   return head
 }
 ```
+
+```javascript 
+var findMedianSortedArrays = function(nums1, nums2) {
+    const mergedArray = nums1.concat(nums2).sort((a, b) => a - b);
+    const half = Math.floor(mergedArray.length / 2);
+    
+    if(mergedArray.length % 2) {
+        // uneven length 1, 3, 5
+        return mergedArray[half];
+    } else {
+        // ((3 - 1) + 3) / 2
+        return (mergedArray[half - 1] + mergedArray[half]) / 2;
+    }
+};
+
+findMedianSortedArrays([1,2], [3,4]);
+
+```
