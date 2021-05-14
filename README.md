@@ -236,4 +236,8 @@ var missingNumber = function(nums) {
     }
     return expectedSum - actualSum;
 };
+
+missingNumber([9,6,4,2,3,5,7,0,1])
+// missing number 8 
+// when for instance [0], the output should be 1
 ```
