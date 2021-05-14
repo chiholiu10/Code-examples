@@ -44,24 +44,20 @@ firstDuplicate([2, 1, 3, 5, 3, 2])
 ```
 
 ```javascript
-const lengthOfLongestSubstring = (s) => {
-    let map = {}
-    let start = 0
-    let maxLen = 0
-    let arr = s.split('')
+var lengthOfLongestSubstring = function(s) {
+    let longest = 0;
+    let current = "";
     
-    for (i=0; i < s.length; i++) {
-        let current = map[arr[i]]
-        if (current!== undefined && start <= current) {
-            start = current + 1
-        } else {
-            maxLen = Math.max(maxLen, i - start + 1)
-        }
+    for (let i = 0; i < s.length; i++) {
+        current = current.substring(current.indexOf(s[i]) + 1)        
+        current += s[i];
         
-        map[arr[i]] = i
+        if (current.length > longest) {
+            longest = current.length;
+        }
     }
     
-    return maxLen
+    return longest;
 };
 ```
 
