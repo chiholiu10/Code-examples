@@ -224,3 +224,16 @@ const findMaxMin = (arr) => {
 }
 findMaxMin(arr);
 ```
+
+```js
+var missingNumber = function(nums) {
+    let numsLen = nums.length;
+    let expectedSum = 0;
+    let actualSum = 0;
+    for(let i = 0; i < numsLen; i++) {
+        expectedSum += i + 1;
+        actualSum += nums[i];
+    }
+    return expectedSum - actualSum;
+};
+```
