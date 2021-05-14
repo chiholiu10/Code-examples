@@ -209,3 +209,18 @@ var combinationSum = function(candidates, target) {
 };
 
 ```
+
+```javascript
+    const arr = [1, 2, 3, 4, 100];
+
+const findMaxMin = (arr) => {
+  let max = Math.max(...arr);
+  let min = Math.min(...arr);
+  
+  return {
+    "max": max,
+    "min": min
+  }
+}
+findMaxMin(arr);
+```
