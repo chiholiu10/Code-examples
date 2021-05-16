@@ -254,3 +254,33 @@ function isPalindrome(word) {
   return lettersOnly === lettersOnly.split("").reverse().join("");
 }
 ```
+
+```js
+const es5 = {
+  name: "Chiho",
+  surName: "Liu",
+  allName: function() {
+    console.log(this.name); 
+      var self = this;
+      setTimeout(function() {
+        console.log('es5 works now' + self.name)
+      }, 1000)
+  }
+}
+
+es5.allName();
+
+
+const es6 = {
+  name: "Chiho",
+  surname: "Liu",
+  allName: function() {
+    console.log(this.name);
+    setTimeout(() => {
+      console.log('es6 works ' + this.name)
+    })
+  }
+}
+
+es6.allName();
+```
