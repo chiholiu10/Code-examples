@@ -283,3 +283,16 @@ const es6 = {
 
 es6.allName();
 ```
+
+```js
+  if(number !== parseInt(number, 10)) return 'Input must be an integer';
+
+  const binaryNumber = number.toString(2);
+
+  const arr = binaryNumber.split('1').map((binaryGap, index, binaryArr) => {
+       return binaryArr[index + 1] != undefined ? binaryGap.length : 0;
+   });
+  
+  // returns the longest length of the binary gap
+  return Math.max.apply(Math, arr);
+  ```
